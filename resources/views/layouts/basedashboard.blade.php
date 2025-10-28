@@ -32,7 +32,7 @@
             </button>
             
             <!-- Menú de navegación (Solo para admin y profesores) -->
-            <div class="collapse navbar-collapse" id="navbarNav">
+            @auth <div class="collapse navbar-collapse" id="navbarNav">
                 @if(auth()->user()->tipo->tipo !== 'estudiante')
                     <ul class="navbar-nav me-auto">
                         @if(auth()->user()->tipo->tipo === 'admin' || auth()->user()->tipo->tipo === 'profesor')
@@ -108,7 +108,7 @@
                         </ul>
                     </li>
                 </ul>
-            </div>
+            </div> @endauth
         </div>
     </nav>
     
