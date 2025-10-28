@@ -1,4 +1,4 @@
-@extends('layouts.baseacceso')
+@extends('layouts.basedashboard')
 
 @section('titulo', 'Tipos de Usuarios')
 
