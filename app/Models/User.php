@@ -18,7 +18,7 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'tipo_id',
+        'tipos_id',
         'username',
         'email',
         'password',
@@ -45,7 +45,8 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
-    // Relación: Un usuario pertenece a un tipo
+
+   // Relación: Un usuario pertenece a un tipo
     public function tipo(){
         return $this->belongsTo(Tipo::class, 'tipos_id');
     }
